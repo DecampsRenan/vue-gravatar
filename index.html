@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A VueJS implementation of Gravatar API">
+  <meta name="author" content="Renan Decamps renan.decamps@gmail.com">
+
+  <title>Gravatar VueJS Component</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/cover.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="site-wrapper">
+
+  <div class="site-wrapper-inner">
+
+    <div class="cover-container">
+
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">Gravatar VueJS Component</h3>
+          <nav>
+            <ul class="nav masthead-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Doc</a></li>
+              <li><a href="#">Github</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="inner cover">
+        <h1 class="cover-heading">Your Gravatar Here.</h1>
+
+        <p class="lead">
+          <gravatar :href="email" />
+        </p>
+
+        <p class="lead">
+          <input type="email" class="form-control" v-model="email" placeholder="Your email">
+        </p>
+      </div>
+
+      <div class="mastfoot">
+        <div class="inner">
+          <p>Follow me on Twitter - <a href="https://twitter.com/DecampsRenan">@DecampsRenan</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
