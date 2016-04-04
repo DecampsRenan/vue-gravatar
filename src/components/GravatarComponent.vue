@@ -17,20 +17,39 @@
 <script>
   import md5 from 'md5'
 
+  // url du service
+  const ENDPOINT = 'http://www.gravatar.com/avatar/'
+
   export default {
     props: {
-      href: {
+      href: {         // user's profile email
         type: String
+      },
+      default: {      // default picture
+        type: String,
+        default: 'mm'
+      },
+      size: {         // Size of the image
+        type: Number,
+        default: 80
       }
     },
     data () {
       return {
-        endpoint: 'http://www.gravatar.com/avatar/'
+        endpoint: ENDPOINT
       }
     },
     computed: {
       url () {
-        return this.endpoint + md5(this.href.trim())
+        let hash = md5(this.href.trim())
+        let size = '?s=' + this.size
+        let defPicture = '&d=' + this.default
+
+        if (this.default === 'gravatar') {
+          defPicture = ''
+        }
+
+        return this.endpoint + hash + size + defPicture
       }
     }
   }
