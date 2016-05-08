@@ -27,11 +27,11 @@
       },
       default: {      // default picture
         type: String,
-        default: 'mm'
+        default: 'mm' // Displays a shape of someone
       },
       size: {         // Size of the image
         type: Number,
-        default: 80
+        default: 80   // Default size : 80 (squarre shape)
       }
     },
     data () {
@@ -49,6 +49,7 @@
           defPicture = ''
         }
 
+        // Génère une URL --> 'http://www.gravatar.com/avatar/hashToutMoche?s=80&d=mm'
         return this.endpoint + hash + size + defPicture
       }
     }
