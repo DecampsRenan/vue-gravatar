@@ -1,5 +1,7 @@
 # GravatarComponentJS
 
+[![Stories in Ready](https://badge.waffle.io/rdecamps/vue-gravatar.svg?label=ready&title=Ready)](http://waffle.io/rdecamps/vue-gravatar)
+
 > A Vue.js gravatar component.
 
 ## How to use it ?
